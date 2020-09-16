@@ -13,7 +13,7 @@
     <meta name="description" content="使用的有
 FireBase realtime database , functions , Cloud FireStore
 Post man
-node 8 (因為免費專案只能用node 8 更高的版,"> 
+node 8 (因為免費專案只能用 node 8 更高的,"> 
     <meta name="author" content="John Doe"> 
     <link rel="alternative" href="atom.xml" title="william&#39;s space" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -70,13 +70,16 @@ node 8 (因為免費專案只能用node 8 更高的版,">
             <h2 id="使用的有"><a href="#使用的有" class="headerlink" title="使用的有"></a>使用的有</h2><ul>
 <li>FireBase realtime database , functions , Cloud FireStore</li>
 <li>Post man</li>
-<li>node 8 (因為免費專案只能用node 8 更高的版本要升級帳戶才能使用cloude function，node 8 只支援到 2021年)</li>
+<li>node 8 (因為免費專案只能用 node 8 更高的版本要升級帳戶才能使用 cloude function，node 8 只支援到 2021 年)</li>
 <li>express</li>
 </ul>
-<h6 id="因為一開始是用-react-native-做，網頁版正在慢慢補上所以先講-firebase-的部分就好，"><a href="#因為一開始是用-react-native-做，網頁版正在慢慢補上所以先講-firebase-的部分就好，" class="headerlink" title="因為一開始是用 react native 做，網頁版正在慢慢補上所以先講 firebase 的部分就好，"></a>因為一開始是用 react native 做，網頁版正在慢慢補上所以先講 firebase 的部分就好，</h6><h6 id="firebase-在設計資料結構的時候要注意"><a href="#firebase-在設計資料結構的時候要注意" class="headerlink" title="firebase 在設計資料結構的時候要注意"></a>firebase 在設計資料結構的時候要注意</h6><ul>
+<h6 id="一開始是用-react-native-做因為這原本是某個案子的-demo-有簽保密協議只好重寫成網頁版，網頁版正在慢慢補上所以先講-firebase-的部分就好，"><a href="#一開始是用-react-native-做因為這原本是某個案子的-demo-有簽保密協議只好重寫成網頁版，網頁版正在慢慢補上所以先講-firebase-的部分就好，" class="headerlink" title="一開始是用 react native 做因為這原本是某個案子的 demo 有簽保密協議只好重寫成網頁版，網頁版正在慢慢補上所以先講 firebase 的部分就好，"></a>一開始是用 react native 做因為這原本是某個案子的 demo 有簽保密協議只好重寫成網頁版，網頁版正在慢慢補上所以先講 firebase 的部分就好，</h6><h6 id="firebase-在設計資料結構的時候要注意"><a href="#firebase-在設計資料結構的時候要注意" class="headerlink" title="firebase 在設計資料結構的時候要注意"></a>firebase 在設計資料結構的時候要注意</h6><ul>
 <li>結構不能太深 ，平面化</li>
-<li>鍵值沒指定的話都是自動產生的亂數 document id，你要自己在文件內搞一個id來撈你要的資料 比如uid，在建立使用者的時候會建立的一個獨一無二字串來把各個集合內的資料串起來</li>
+<li>鍵值沒指定的話都是自動產生的亂數 document id，你要自己在文件內搞一個 id 來撈你要的資料 比如 uid，在建立使用者的時候會建立的一個獨一無二字串來把各個集合內的資料串起來</li>
 </ul>
+<h2 id="Storage-的資料設計差不多是這樣"><a href="#Storage-的資料設計差不多是這樣" class="headerlink" title="Storage 的資料設計差不多是這樣"></a>Storage 的資料設計差不多是這樣</h2><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&quot;userHandle&quot;:&#123;</span><br><span class="line">    ...</span><br><span class="line">    userID: &quot;uid&quot;</span><br><span class="line">&#125;</span><br><span class="line">&quot;roomID&quot;:&#123;</span><br><span class="line">     ...</span><br><span class="line">     member:[0:uid , 1:uid]</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h6 id="在建立使用者之後會在-user-collection-裡面建立-user-資料，裡面會儲存使用者的資訊比如大頭貼，email-等等"><a href="#在建立使用者之後會在-user-collection-裡面建立-user-資料，裡面會儲存使用者的資訊比如大頭貼，email-等等" class="headerlink" title="在建立使用者之後會在 user collection 裡面建立 user 資料，裡面會儲存使用者的資訊比如大頭貼，email 等等"></a>在建立使用者之後會在 user collection 裡面建立 user 資料，裡面會儲存使用者的資訊比如大頭貼，email 等等</h6><h6 id="roomID-是建立聊天室之後回傳的-doc-ID，然後-room-裡面的-member-陣列記錄聊天室內人的-uid，"><a href="#roomID-是建立聊天室之後回傳的-doc-ID，然後-room-裡面的-member-陣列記錄聊天室內人的-uid，" class="headerlink" title="roomID 是建立聊天室之後回傳的 doc ID，然後 room 裡面的 member 陣列記錄聊天室內人的 uid，"></a>roomID 是建立聊天室之後回傳的 doc ID，然後 room 裡面的 member 陣列記錄聊天室內人的 uid，</h6><h6 id="後端-api-只需要有-uid-就可以撈出這些資料，整理一下丟回去"><a href="#後端-api-只需要有-uid-就可以撈出這些資料，整理一下丟回去" class="headerlink" title="後端 api 只需要有 uid 就可以撈出這些資料，整理一下丟回去"></a>後端 api 只需要有 uid 就可以撈出這些資料，整理一下丟回去</h6><p>……後續慢慢補上先完成 web 板好了</p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
