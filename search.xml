@@ -3,7 +3,13 @@
   <entry>
     <title>Hexo GitPage初次使用</title>
     <url>/2020/09/15/2020-09-15/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<p > 前幾天發現了hexo這個套件剛好最近想要做一個完整點的部落格就索性直接用了，省了不少時間精力目前用起來的感覺不錯，豐富的主題大部分需要的功能都有</p>
+<p > 而且最重要的是可以部屬到github上面這超重要! 來寫一下使用方法</p>
+
+<h1 id="NPM-Git"><a href="#NPM-Git" class="headerlink" title="NPM Git"></a>NPM Git</h1><h6 id="首先要先有npm-還有-Git，-npm是node-js附帶的套件管理器沒有的話要先去node-js官網安裝-，Git是版本控制系統-Hexo會用git指令去抓初始化檔案-，都有了就可以執行下一步了"><a href="#首先要先有npm-還有-Git，-npm是node-js附帶的套件管理器沒有的話要先去node-js官網安裝-，Git是版本控制系統-Hexo會用git指令去抓初始化檔案-，都有了就可以執行下一步了" class="headerlink" title="首先要先有npm 還有 Git， npm是node.js附帶的套件管理器沒有的話要先去node.js官網安裝 ，Git是版本控制系統 Hexo會用git指令去抓初始化檔案 ，都有了就可以執行下一步了!"></a>首先要先有npm 還有 Git， npm是node.js附帶的套件管理器沒有的話要先去node.js官網安裝 ，Git是版本控制系統 Hexo會用git指令去抓初始化檔案 ，都有了就可以執行下一步了!</h6><h6 id="Git-https-gitforwindows-org"><a href="#Git-https-gitforwindows-org" class="headerlink" title="Git: https://gitforwindows.org/"></a>Git: <a href="https://">https://gitforwindows.org/</a></h6><p>######</p>
+<h1 id="安裝HEXO"><a href="#安裝HEXO" class="headerlink" title="安裝HEXO"></a>安裝HEXO</h1><figure class="highlight cs"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+
+<h1 id="初始化HEXO資料夾"><a href="#初始化HEXO資料夾" class="headerlink" title="初始化HEXO資料夾"></a>初始化HEXO資料夾</h1>]]></content>
       <categories>
         <category>blog</category>
       </categories>
@@ -15,7 +21,16 @@
   <entry>
     <title>React + Firebase 即時聊天系統</title>
     <url>/2020/09/14/hello-world/</url>
-    <content><![CDATA[<p>*</p>
+    <content><![CDATA[<h2 id="使用的有"><a href="#使用的有" class="headerlink" title="使用的有"></a>使用的有</h2><ul>
+<li>FireBase realtime database , functions , Cloud FireStore</li>
+<li>Post man</li>
+<li>node 8 (因為免費專案只能用node 8 更高的版本要升級帳戶才能使用cloude function，node 8 只支援到 2021年)</li>
+<li>express</li>
+</ul>
+<h6 id="因為一開始是用-react-native-做，網頁版正在慢慢補上所以先講-firebase-的部分就好，"><a href="#因為一開始是用-react-native-做，網頁版正在慢慢補上所以先講-firebase-的部分就好，" class="headerlink" title="因為一開始是用 react native 做，網頁版正在慢慢補上所以先講 firebase 的部分就好，"></a>因為一開始是用 react native 做，網頁版正在慢慢補上所以先講 firebase 的部分就好，</h6><h6 id="firebase-在設計資料結構的時候要注意"><a href="#firebase-在設計資料結構的時候要注意" class="headerlink" title="firebase 在設計資料結構的時候要注意"></a>firebase 在設計資料結構的時候要注意</h6><ul>
+<li>結構不能太深 ，平面化</li>
+<li>鍵值沒指定的話都是自動產生的亂數 document id，你要自己在文件內搞一個id來撈你要的資料 比如uid，在建立使用者的時候會建立的一個獨一無二字串來把各個集合內的資料串起來</li>
+</ul>
 ]]></content>
       <categories>
         <category>React</category>

@@ -10,8 +10,10 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="William,"> 
-    <meta name="description" content="*
-"> 
+    <meta name="description" content="使用的有
+FireBase realtime database , functions , Cloud FireStore
+Post man
+node 8 (因為免費專案只能用node 8 更高的版,"> 
     <meta name="author" content="John Doe"> 
     <link rel="alternative" href="atom.xml" title="william&#39;s space" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -65,7 +67,16 @@
 
         </div>
         <div class="content markdown">
-            <p>*</p>
+            <h2 id="使用的有"><a href="#使用的有" class="headerlink" title="使用的有"></a>使用的有</h2><ul>
+<li>FireBase realtime database , functions , Cloud FireStore</li>
+<li>Post man</li>
+<li>node 8 (因為免費專案只能用node 8 更高的版本要升級帳戶才能使用cloude function，node 8 只支援到 2021年)</li>
+<li>express</li>
+</ul>
+<h6 id="因為一開始是用-react-native-做，網頁版正在慢慢補上所以先講-firebase-的部分就好，"><a href="#因為一開始是用-react-native-做，網頁版正在慢慢補上所以先講-firebase-的部分就好，" class="headerlink" title="因為一開始是用 react native 做，網頁版正在慢慢補上所以先講 firebase 的部分就好，"></a>因為一開始是用 react native 做，網頁版正在慢慢補上所以先講 firebase 的部分就好，</h6><h6 id="firebase-在設計資料結構的時候要注意"><a href="#firebase-在設計資料結構的時候要注意" class="headerlink" title="firebase 在設計資料結構的時候要注意"></a>firebase 在設計資料結構的時候要注意</h6><ul>
+<li>結構不能太深 ，平面化</li>
+<li>鍵值沒指定的話都是自動產生的亂數 document id，你要自己在文件內搞一個id來撈你要的資料 比如uid，在建立使用者的時候會建立的一個獨一無二字串來把各個集合內的資料串起來</li>
+</ul>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
