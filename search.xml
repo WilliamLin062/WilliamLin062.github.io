@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Animation30 Day1</title>
+    <url>/2020/09/18/css-30-Day1/</url>
+    <content><![CDATA[<h2 id="用到了"><a href="#用到了" class="headerlink" title="用到了"></a>用到了</h2><ul>
+<li>TweenMaxTweenMax</li>
+<li>TimelineMax</li>
+<li><del>ScrollMagicScrollMagic</del> (有更好的被取代了)</li>
+<li>GSAP</li>
+</ul>
+<h2 id="動機"><a href="#動機" class="headerlink" title="動機"></a>動機</h2><h6 id="最近突然覺得自己炫泡動畫功力真的該加強一下了，之前都不怎麼在意外觀只想要把功能弄出來-外觀能看就好-，不過還是該學一下怎麼弄複雜的動畫還有視覺設計"><a href="#最近突然覺得自己炫泡動畫功力真的該加強一下了，之前都不怎麼在意外觀只想要把功能弄出來-外觀能看就好-，不過還是該學一下怎麼弄複雜的動畫還有視覺設計" class="headerlink" title="最近突然覺得自己炫泡動畫功力真的該加強一下了，之前都不怎麼在意外觀只想要把功能弄出來 外觀能看就好 ，不過還是該學一下怎麼弄複雜的動畫還有視覺設計"></a>最近突然覺得自己炫泡動畫功力真的該加強一下了，之前都不怎麼在意外觀只想要把功能弄出來 外觀能看就好 ，不過還是該學一下怎麼弄複雜的動畫還有視覺設計</h6><h1 id="GreenSock"><a href="#GreenSock" class="headerlink" title="GreenSock"></a>GreenSock</h1><h6 id="這個真的非常好用，用了這個不用再管關鍵貞還有時間線可以專心在設計動畫，而且還有-Scroll-Trigger-，這是最近出的功能之前都還要搭配另一個叫-Scroll-Magic-的套件，總之非常推"><a href="#這個真的非常好用，用了這個不用再管關鍵貞還有時間線可以專心在設計動畫，而且還有-Scroll-Trigger-，這是最近出的功能之前都還要搭配另一個叫-Scroll-Magic-的套件，總之非常推" class="headerlink" title="這個真的非常好用，用了這個不用再管關鍵貞還有時間線可以專心在設計動畫，而且還有 Scroll Trigger ，這是最近出的功能之前都還要搭配另一個叫 Scroll Magic 的套件，總之非常推"></a>這個真的非常好用，用了這個不用再管關鍵貞還有時間線可以專心在設計動畫，而且還有 Scroll Trigger ，這是最近出的功能之前都還要搭配另一個叫 Scroll Magic 的套件，總之非常推</h6><h4 id="只需要使用-cdn-體驗一下就知道有多簡單"><a href="#只需要使用-cdn-體驗一下就知道有多簡單" class="headerlink" title="只需要使用 cdn 體驗一下就知道有多簡單"></a>只需要使用 cdn 體驗一下就知道有多簡單</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdnjs.cloudflare.com&#x2F;ajax&#x2F;libs&#x2F;gsap&#x2F;3.5.1&#x2F;gsap.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdnjs.cloudflare.com&#x2F;ajax&#x2F;libs&#x2F;gsap&#x2F;3.5.1&#x2F;ScrollTrigger.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h4><h6 id="官網提供最簡單的範例"><a href="#官網提供最簡單的範例" class="headerlink" title="官網提供最簡單的範例"></a>官網提供最簡單的範例</h6><figure class="highlight cs"><table><tr><td class="code"><pre><span class="line"><span class="comment">//當box進入到畫面的時候往右邊滑</span></span><br><span class="line"></span><br><span class="line">gsap.to(<span class="string">&#x27;#box&#x27;</span>,&#123;x:<span class="number">200</span>&#125;)</span><br></pre></td></tr></table></figure>
+
+<h6 id="比較進階-可以自己設定很多屬性"><a href="#比較進階-可以自己設定很多屬性" class="headerlink" title="比較進階 可以自己設定很多屬性"></a>比較進階 可以自己設定很多屬性</h6><figure class="highlight cs"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 設定觸發元件還有觸發位置，其他還提供非常多屬性可以設定 功能很多</span></span><br><span class="line"><span class="keyword">let</span> tl = gsap.timeline(&#123;scrollTrigger:&#123;</span><br><span class="line">trigger:<span class="string">&quot;#div&quot;</span>,</span><br><span class="line">start:<span class="string">&#x27;top top&#x27;</span>,</span><br><span class="line">scrub:<span class="number">1</span></span><br><span class="line"></span><br><span class="line">&#125;&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//從右側滑回來</span></span><br><span class="line">tl.form(<span class="string">&#x27;.box&#x27;</span>,&#123;x:<span class="number">200</span>&#125;)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h1><h6 id="一下就能上手感覺還有很多花樣可以研究，明天繼續"><a href="#一下就能上手感覺還有很多花樣可以研究，明天繼續" class="headerlink" title="一下就能上手感覺還有很多花樣可以研究，明天繼續!"></a>一下就能上手感覺還有很多花樣可以研究，明天繼續!</h6>]]></content>
+      <tags>
+        <tag>css</tag>
+        <tag>animation</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo GitPage初次使用</title>
     <url>/2020/09/15/2020-09-15/</url>
     <content><![CDATA[<p > 前幾天發現了hexo這個套件剛好最近想要做一個完整點的部落格就索性直接用了，省了不少時間精力目前用起來的感覺不錯，豐富的主題大部分需要的功能都有</p>
@@ -22,28 +44,6 @@
       <tags>
         <tag>blog</tag>
         <tag>GitPage</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Animation30 Day1</title>
-    <url>/2020/09/18/css-30-Day1/</url>
-    <content><![CDATA[<h3 id="用到了"><a href="#用到了" class="headerlink" title="用到了"></a>用到了</h3><ul>
-<li>TweenMaxTweenMax</li>
-<li>TimelineMax</li>
-<li><del>ScrollMagicScrollMagic</del> (有更好的被取代了)</li>
-<li>GSAP</li>
-</ul>
-<h3 id="動機"><a href="#動機" class="headerlink" title="動機"></a>動機</h3><h6 id="最近突然覺得自己炫泡動畫功力真的該加強一下了，之前都不怎麼在意外觀只想要把功能弄出來-外觀能看就好-，不過還是該學一下怎麼弄複雜的動畫還有視覺設計"><a href="#最近突然覺得自己炫泡動畫功力真的該加強一下了，之前都不怎麼在意外觀只想要把功能弄出來-外觀能看就好-，不過還是該學一下怎麼弄複雜的動畫還有視覺設計" class="headerlink" title="最近突然覺得自己炫泡動畫功力真的該加強一下了，之前都不怎麼在意外觀只想要把功能弄出來 外觀能看就好 ，不過還是該學一下怎麼弄複雜的動畫還有視覺設計"></a>最近突然覺得自己炫泡動畫功力真的該加強一下了，之前都不怎麼在意外觀只想要把功能弄出來 外觀能看就好 ，不過還是該學一下怎麼弄複雜的動畫還有視覺設計</h6><h1 id="GreenSock"><a href="#GreenSock" class="headerlink" title="GreenSock"></a>GreenSock</h1><h6 id="這個真的非常好用，用了這個不用再管關鍵貞還有時間線可以專心在設計動畫，而且還有-Scroll-Trigger-，這是最近出的功能之前都還要搭配另一個叫-Scroll-Magic-的套件，總之非常推"><a href="#這個真的非常好用，用了這個不用再管關鍵貞還有時間線可以專心在設計動畫，而且還有-Scroll-Trigger-，這是最近出的功能之前都還要搭配另一個叫-Scroll-Magic-的套件，總之非常推" class="headerlink" title="這個真的非常好用，用了這個不用再管關鍵貞還有時間線可以專心在設計動畫，而且還有 Scroll Trigger ，這是最近出的功能之前都還要搭配另一個叫 Scroll Magic 的套件，總之非常推"></a>這個真的非常好用，用了這個不用再管關鍵貞還有時間線可以專心在設計動畫，而且還有 Scroll Trigger ，這是最近出的功能之前都還要搭配另一個叫 Scroll Magic 的套件，總之非常推</h6><h4 id="只需要使用-cdn-體驗一下就知道有多簡單"><a href="#只需要使用-cdn-體驗一下就知道有多簡單" class="headerlink" title="只需要使用 cdn 體驗一下就知道有多簡單"></a>只需要使用 cdn 體驗一下就知道有多簡單</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdnjs.cloudflare.com&#x2F;ajax&#x2F;libs&#x2F;gsap&#x2F;3.5.1&#x2F;gsap.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdnjs.cloudflare.com&#x2F;ajax&#x2F;libs&#x2F;gsap&#x2F;3.5.1&#x2F;ScrollTrigger.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
-
-<h4 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h4><h6 id="官網提供最簡單的範例"><a href="#官網提供最簡單的範例" class="headerlink" title="官網提供最簡單的範例"></a>官網提供最簡單的範例</h6><figure class="highlight cs"><table><tr><td class="code"><pre><span class="line"><span class="comment">//當box進入到畫面的時候往右邊滑</span></span><br><span class="line"></span><br><span class="line">gsap.to(<span class="string">&#x27;#box&#x27;</span>,&#123;x:<span class="number">200</span>&#125;)</span><br></pre></td></tr></table></figure>
-
-<h6 id="比較進階-可以自己設定很多屬性"><a href="#比較進階-可以自己設定很多屬性" class="headerlink" title="比較進階 可以自己設定很多屬性"></a>比較進階 可以自己設定很多屬性</h6><figure class="highlight cs"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 設定觸發元件還有觸發位置，其他還提供非常多屬性可以設定 功能很多</span></span><br><span class="line"><span class="keyword">let</span> tl = gsap.timeline(&#123;scrollTrigger:&#123;</span><br><span class="line">trigger:<span class="string">&quot;#div&quot;</span>,</span><br><span class="line">start:<span class="string">&#x27;top top&#x27;</span>,</span><br><span class="line">scrub:<span class="number">1</span></span><br><span class="line"></span><br><span class="line">&#125;&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//從右側滑回來</span></span><br><span class="line">tl.form(<span class="string">&#x27;.box&#x27;</span>,&#123;x:<span class="number">200</span>&#125;)</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h1 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h1><h6 id="一下就能上手感覺還有很多花樣可以研究，明天繼續"><a href="#一下就能上手感覺還有很多花樣可以研究，明天繼續" class="headerlink" title="一下就能上手感覺還有很多花樣可以研究，明天繼續!"></a>一下就能上手感覺還有很多花樣可以研究，明天繼續!</h6>]]></content>
-      <tags>
-        <tag>css</tag>
-        <tag>animation</tag>
       </tags>
   </entry>
   <entry>
