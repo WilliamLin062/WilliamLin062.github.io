@@ -25,6 +25,20 @@
       </tags>
   </entry>
   <entry>
+    <title>css30 -Day1</title>
+    <url>/2020/09/18/css-30-Day1/</url>
+    <content><![CDATA[<h3 id="用到了"><a href="#用到了" class="headerlink" title="用到了"></a>用到了</h3><ul>
+<li>TweenMaxTweenMax</li>
+<li>TimelineMax</li>
+<li>ScrollMagicScrollMagic</li>
+</ul>
+<h3 id="動機"><a href="#動機" class="headerlink" title="動機"></a>動機</h3><h6 id="最近突然覺得自己-CSS-真的該加強一下了，之前都不怎麼在意外觀只想要把功能弄出來-外觀能看就好-，不過還是該學一下怎麼弄複雜的動畫還有視覺設計"><a href="#最近突然覺得自己-CSS-真的該加強一下了，之前都不怎麼在意外觀只想要把功能弄出來-外觀能看就好-，不過還是該學一下怎麼弄複雜的動畫還有視覺設計" class="headerlink" title="最近突然覺得自己 CSS 真的該加強一下了，之前都不怎麼在意外觀只想要把功能弄出來 外觀能看就好 ，不過還是該學一下怎麼弄複雜的動畫還有視覺設計"></a>最近突然覺得自己 CSS 真的該加強一下了，之前都不怎麼在意外觀只想要把功能弄出來 外觀能看就好 ，不過還是該學一下怎麼弄複雜的動畫還有視覺設計</h6>]]></content>
+      <tags>
+        <tag>css</tag>
+        <tag>animation</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>React + Firebase 即時聊天系統</title>
     <url>/2020/09/14/firebase%20IM/</url>
     <content><![CDATA[<h2 id="使用的有"><a href="#使用的有" class="headerlink" title="使用的有"></a>使用的有</h2><ul>
