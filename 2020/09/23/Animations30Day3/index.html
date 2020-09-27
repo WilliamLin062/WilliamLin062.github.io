@@ -11,9 +11,8 @@
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="William,"> 
     <meta name="description" content="整理一下目前我對pixi的了解
-container   (放圖形的容器可以有很多個)
-stage         (是在Application底下的成員，根畫面容器)
-loader       (預,"> 
+container   (放圖形的容器可以有很多個，可以用來分組)
+stage         (是在Application底下的成員，根畫面容器，跟他的意思一樣就是,"> 
     <meta name="author" content="John Doe"> 
     <link rel="alternative" href="atom.xml" title="william&#39;s space" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -68,12 +67,18 @@ loader       (預,">
         </div>
         <div class="content markdown">
             <h2 id="整理一下目前我對pixi的了解"><a href="#整理一下目前我對pixi的了解" class="headerlink" title="整理一下目前我對pixi的了解"></a>整理一下目前我對pixi的了解</h2><ul>
-<li>container   (放圖形的容器可以有很多個)</li>
-<li>stage         (是在Application底下的成員，根畫面容器)</li>
-<li>loader       (預加載器  先把使用的素材都放進去，尤其是骨架貼圖 ，可以避免素材沒載進去 畫面已經出現然後破圖的現象)</li>
+<li>container   (放圖形的容器可以有很多個，可以用來分組)</li>
+<li>stage         (是在Application底下的成員，根畫面容器，跟他的意思一樣就是舞台)</li>
+<li>loader       (預加載器 渲染需要先把素材轉換成WebGL GPU能使用的圖片，就是紋理)</li>
 <li>ticker         (Application的成員 ,用來更新畫面)</li>
 <li>application (建立PIXI動畫的class，會自動產生 ticker  ,renderer ,root container)</li>
 </ul>
+<h3 id="大概的藍圖"><a href="#大概的藍圖" class="headerlink" title="大概的藍圖"></a>大概的藍圖</h3><ol>
+<li>載入緩存素材</li>
+<li>初始化</li>
+<li>ticker更新</li>
+<li>其他邏輯</li>
+</ol>
 <h2 id="研究文件"><a href="#研究文件" class="headerlink" title="研究文件"></a>研究文件</h2><p>待續</p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
